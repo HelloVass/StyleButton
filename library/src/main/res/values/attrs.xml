@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!--按下去的透明度-->
+	<attr format="float" name="uic_pressed_alpha"/>
+	<!--圆角大小-->
+	<attr format="dimension" name="uil_radius"/>
+	<!--边框颜色-->
+	<attr format="color" name="uil_stroke_color"/>
+	<!--边框大小-->
+	<attr format="dimension" name="uil_stroke_width"/>
+	<!--填充色-->
+	<attr format="color" name="uil_solid_color"/>
+
+	<declare-styleable name="UIImageButton">
+		<!--图片资源-->
+		<attr name="android:src"/>
+		<!--图片的颜色-->
+		<attr format="color" name="uiib_src_color"/>
+		<!--按下去的透明度-->
+		<attr name="uic_pressed_alpha"/>
+	</declare-styleable>
+
+	<declare-styleable name="UITextButton">
+		<!--文字颜色-->
+		<attr name="android:textColor"/>
+		<!--按下去的透明度-->
+		<attr name="uic_pressed_alpha"/>
+	</declare-styleable>
+
+	<declare-styleable name="UIRelativeLayout">
+		<!--按下去的透明度-->
+		<attr name="uic_pressed_alpha"/>
+		<!--圆角大小-->
+		<attr name="uil_radius"/>
+		<!--边框颜色-->
+		<attr name="uil_stroke_color"/>
+		<!--边框大小-->
+		<attr name="uil_stroke_width"/>
+		<!--填充色-->
+		<attr name="uil_solid_color"/>
+	</declare-styleable>
+
+</resources>

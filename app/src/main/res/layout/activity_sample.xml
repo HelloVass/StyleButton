@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="#FFFFFF"
+		android:gravity="center_horizontal"
+		android:orientation="vertical"
+		tools:context="cn.lydia.pero.stylebuttondemo.SampleActivity"
+		>
+
+	<cn.lydia.pero.uiview.library.UIImageButton
+			android:id="@+id/uiib_test"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@mipmap/ic_page_empty"
+			app:uiib_src_color="@color/colorAccent"
+			/>
+
+	<android.support.v4.widget.Space
+			android:layout_width="match_parent"
+			android:layout_height="24dp"
+			/>
+
+	<cn.lydia.pero.uiview.library.UITextButton
+			android:id="@+id/uitb_test"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="陈 轲（HelloVass）"
+			android:textColor="@color/colorAccent"
+			android:textSize="18sp"
+			/>
+
+	<android.support.v4.widget.Space
+			android:layout_width="match_parent"
+			android:layout_height="24dp"
+			/>
+
+	<cn.lydia.pero.uiview.library.UIRelativeLayout
+			android:id="@+id/uirl_test"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:layout_marginLeft="9dp"
+			android:layout_marginRight="9dp"
+			app:uil_radius="4dp"
+			app:uil_solid_color="#F1F1F1"
+			app:uil_stroke_color="@color/colorAccent"
+			app:uil_stroke_width="2dp"
+			>
+
+	</cn.lydia.pero.uiview.library.UIRelativeLayout>
+
+</LinearLayout>
