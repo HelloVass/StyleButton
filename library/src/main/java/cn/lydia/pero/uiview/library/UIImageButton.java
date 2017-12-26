@@ -31,6 +31,7 @@ public class UIImageButton extends android.support.v7.widget.AppCompatImageView 
 
   public UIImageButton(Context context, AttributeSet attrs, int defStyleAttr) {
     super(context, attrs, defStyleAttr);
+    setClickable(true);
     init(context, attrs, defStyleAttr);
     setSrc(mSrc);
   }
@@ -57,8 +58,8 @@ public class UIImageButton extends android.support.v7.widget.AppCompatImageView 
     }
 
     mSrc = src;
-    setImageDrawable(
-        TintDrawableGenerator.tintDrawable(mSrc.mutate(), ColorStateListGenerator.generate(mColor, mPressedAlpha)));
+    setImageDrawable(TintDrawableGenerator.tintDrawable(mSrc.mutate(),
+        ColorStateListGenerator.generate(mColor, mPressedAlpha)));
   }
 
   /**
@@ -67,8 +68,8 @@ public class UIImageButton extends android.support.v7.widget.AppCompatImageView 
   public void setColor(@ColorInt int color) {
 
     mColor = color;
-    setImageDrawable(
-        TintDrawableGenerator.tintDrawable(mSrc.mutate(), ColorStateListGenerator.generate(mColor, mPressedAlpha)));
+    setImageDrawable(TintDrawableGenerator.tintDrawable(mSrc.mutate(),
+        ColorStateListGenerator.generate(mColor, mPressedAlpha)));
   }
 
   /**
@@ -77,7 +78,7 @@ public class UIImageButton extends android.support.v7.widget.AppCompatImageView 
   public void setPressedAlpha(float pressedAlpha) {
 
     mPressedAlpha = pressedAlpha;
-    setImageDrawable(
-        TintDrawableGenerator.tintDrawable(mSrc.mutate(), ColorStateListGenerator.generate(mColor, mPressedAlpha)));
+    setImageDrawable(TintDrawableGenerator.tintDrawable(mSrc.mutate(),
+        ColorStateListGenerator.generate(mColor, mPressedAlpha)));
   }
 }

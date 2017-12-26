@@ -17,8 +17,6 @@ import cn.lydia.pero.uiview.library.utils.StateListDrawableGenerator;
 
 public class UIRelativeLayout extends RelativeLayout {
 
-  private float mPressedAlpha;
-
   private float mRadius;
 
   private int mStrokeColor;
@@ -26,6 +24,10 @@ public class UIRelativeLayout extends RelativeLayout {
   private int mStrokeWidth;
 
   private int mSolidColor;
+
+  private int mPressedColor;
+
+  private float mPressedAlpha;
 
   public UIRelativeLayout(Context context) {
     this(context, null);
@@ -54,35 +56,42 @@ public class UIRelativeLayout extends RelativeLayout {
     mStrokeWidth = typedArray.getLayoutDimension(R.styleable.UIRelativeLayout_uil_stroke_width, 0);
     mSolidColor =
         typedArray.getColor(R.styleable.UIRelativeLayout_uil_solid_color, Color.TRANSPARENT);
+    mPressedColor =
+        typedArray.getColor(R.styleable.UIRelativeLayout_uil_pressed_color, Color.TRANSPARENT);
 
     typedArray.recycle();
   }
 
   public void setPressedAlpha(@FloatRange(from = 0.0F, to = 1.0F) float pressedAlpha) {
+
     mPressedAlpha = pressedAlpha;
     setBackground(StateListDrawableGenerator.generate(generatePressed(), generateDisabled(),
         generateNormal()));
   }
 
   public void setRadius(float radius) {
+
     mRadius = radius;
     setBackground(StateListDrawableGenerator.generate(generatePressed(), generateDisabled(),
         generateNormal()));
   }
 
   public void setStrokeColor(@ColorInt int strokeColor) {
+
     mStrokeColor = strokeColor;
     setBackground(StateListDrawableGenerator.generate(generatePressed(), generateDisabled(),
         generateNormal()));
   }
 
   public void setStrokeWidth(int strokeWidth) {
+
     mStrokeWidth = strokeWidth;
     setBackground(StateListDrawableGenerator.generate(generatePressed(), generateDisabled(),
         generateNormal()));
   }
 
   public void setSolidColor(@ColorInt int solidColor) {
+
     mSolidColor = solidColor;
     setBackground(StateListDrawableGenerator.generate(generatePressed(), generateDisabled(),
         generateNormal()));
@@ -91,7 +100,7 @@ public class UIRelativeLayout extends RelativeLayout {
   private GradientDrawableWrapper generatePressed() {
 
     return new GradientDrawableWrapper.Builder().setCornerRadius(mRadius)
-        .setSolidColor(ColorGenerator.generate(mSolidColor, mPressedAlpha))
+        .setSolidColor(ColorGenerator.generate(mPressedColor, mPressedAlpha))
         .setStroke(mStrokeWidth, ColorGenerator.generate(mStrokeColor, mPressedAlpha))
         .build();
   }
@@ -99,7 +108,7 @@ public class UIRelativeLayout extends RelativeLayout {
   private GradientDrawableWrapper generateDisabled() {
 
     return new GradientDrawableWrapper.Builder().setCornerRadius(mRadius)
-        .setSolidColor(ColorGenerator.generate(mSolidColor, mPressedAlpha))
+        .setSolidColor(ColorGenerator.generate(mPressedColor, mPressedAlpha))
         .setStroke(mStrokeWidth, ColorGenerator.generate(mStrokeColor, mPressedAlpha))
         .build();
   }

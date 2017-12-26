@@ -5,6 +5,8 @@ import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.view.Gravity;
+import android.view.View;
 import cn.lydia.pero.uiview.library.utils.ColorStateListGenerator;
 
 /**
@@ -27,6 +29,7 @@ public class UITextButton extends android.support.v7.widget.AppCompatTextView {
 
   public UITextButton(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
     super(context, attrs, defStyleAttr);
+    setGravity(Gravity.CENTER);
     init(context, attrs, defStyleAttr);
     setTextColor(ColorStateListGenerator.generate(mTextColor, mPressedAlpha));
   }

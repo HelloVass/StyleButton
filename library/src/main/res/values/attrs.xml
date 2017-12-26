@@ -11,6 +11,8 @@
 	<attr format="dimension" name="uil_stroke_width"/>
 	<!--填充色-->
 	<attr format="color" name="uil_solid_color"/>
+	<!--按下去的颜色-->
+	<attr name="uil_pressed_color" format="color"/>
 
 	<declare-styleable name="UIImageButton">
 		<!--图片资源-->
@@ -39,6 +41,8 @@
 		<attr name="uil_stroke_width"/>
 		<!--填充色-->
 		<attr name="uil_solid_color"/>
+		<!--按下去的颜色-->
+		<attr name="uil_pressed_color"/>
 	</declare-styleable>
 
 </resources>
